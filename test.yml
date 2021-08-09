@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
       - name: train-schedule
-        image: apache2:latest
+        image: redis
         ports:
         - containerPort: 80
