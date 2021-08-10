@@ -32,7 +32,7 @@ pipeline {
 
       }
       steps {
-        sh 'docker build -t rajanpbg/spring-boot-mongo .'
+        sh 'docker build -t dockerhandson/spring-boot-mongo .'
       }
     }
 
