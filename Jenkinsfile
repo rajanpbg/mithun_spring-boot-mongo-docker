@@ -24,18 +24,6 @@ pipeline {
       }
     }
 
-    stage('Docker Build') {
-      agent {
-        node {
-          label 'docker'
-        }
-
-      }
-      steps {
-        sh 'docker build -t dockerhandson/spring-boot-mongo .'
-      }
-    }
-
     stage('error') {
       agent {
         node {
