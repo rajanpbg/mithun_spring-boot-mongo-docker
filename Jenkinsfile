@@ -37,6 +37,12 @@ pipeline {
     }
 
     stage('error') {
+      agent {
+        node {
+          label 'docker'
+        }
+
+      }
       steps {
         kubernetesDeploy(configs: 'springBootMongo.yml', kubeconfigId: 'KUBECONFIG_LOCAL')
       }
